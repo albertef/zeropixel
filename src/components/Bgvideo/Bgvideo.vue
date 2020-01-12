@@ -1,12 +1,22 @@
 <template>
-<div class="video">
+  <div class="video">
     <div class="bg-video">
-        <video autoplay="" muted="" loop="" playsinline="" id="videocontainer" preload="auto" width="100%" height="100%" poster="">
-            <source src="../../assets/videos/bg.mp4" type="video/mp4">
-        </video>
+      <video
+        autoplay=""
+        muted=""
+        loop=""
+        playsinline=""
+        id="videocontainer"
+        preload="auto"
+        width="100%"
+        height="100%"
+        poster=""
+      >
+        <source src="../../assets/videos/bg.mp4" type="video/mp4" />
+      </video>
     </div>
     <div class="overlay"></div>
-</div>
+  </div>
 </template>
 
 <style>
@@ -15,13 +25,13 @@
   min-height: 100%;
   width: auto;
   height: auto;
-  position: absolute;
+  position: fixed;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
   max-height: 100vh;
   overflow: hidden;
-  z-index: 0;
+  z-index: -1;
 }
 .overlay {
   position: fixed;
@@ -30,6 +40,6 @@
   width: 100%;
   height: 100%;
   background: rgba(0, 0, 0, 0.75);
-  z-index: 1;
+  z-index: 0;
 }
 </style>

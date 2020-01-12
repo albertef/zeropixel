@@ -1,12 +1,16 @@
 <template>
   <div class="home">
-    <h1>Home</h1>
+    <Bgvideo></Bgvideo>
   </div>
 </template>
 
 <script>
+import Bgvideo from "@/components/Bgvideo/Bgvideo.vue";
 export default {
   name: "home",
+  components: {
+    Bgvideo
+  },
   data() {
     return { msg: "Welcome to Your Vue.js App" };
   }
