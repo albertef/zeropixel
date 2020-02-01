@@ -2,20 +2,25 @@
   <div id="app" class="container-fluid">
     <Header></Header>
     <!-- <font-awesome-icon icon="user-secret" /> -->
-    <transition name="moveInUp"><router-view class="router-view"/></transition>
+    <transition name="moveInUp">
+      <router-view class="router-view" />
+    </transition>
     <Footer></Footer>
+    <Loader v-if="$root.loading"></Loader>
   </div>
 </template>
 
 <script>
 import Header from "./components/Header/Header.vue";
 import Footer from "./components/Footer/Footer.vue";
+import Loader from "./components/Loader/Loader.vue";
 
 export default {
   name: "app",
   components: {
     Header,
-    Footer
+    Footer,
+    Loader
   }
 };
 </script>

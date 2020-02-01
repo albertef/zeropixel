@@ -16,7 +16,18 @@ Vue.component("font-awesome-icon", FontAwesomeIcon);
 
 Vue.config.productionTip = false;
 
-new Vue({
+const app = new Vue({
   router,
+  data: { loading: false },
   render: h => h(App)
 }).$mount("#app");
+
+router.beforeEach((to, from, next) => {
+  app.loading = true;
+  next();
+});
+
+router.afterEach((to, from, next) => {
+  setTimeout(() => (app.loading = false), 2500); // timeout for demo purposes
+  next();
+});
