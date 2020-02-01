@@ -18,6 +18,11 @@ export default new Router({
       name: "home",
       component: home
     },
+    {
+      path: "/zeropixel",
+      name: "home",
+      component: home
+    },
     { path: "/who-we-are", name: "whoweare", component: whoweare },
     { path: "/what-we-do", name: "whatwedo", component: whatwedo },
     { path: "/our-vision", name: "ourvision", component: ourvision },
